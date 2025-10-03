@@ -139,10 +139,7 @@ function App() {
     return { totals, percentages };
   };
 
-  const allSectionsComplete = () => {
-    if (!isFormComplete) return false;
-    return bodyParts.every(bp => getTotal(bp.id) === 10);
-  };
+  // Function removed - not currently used but kept for future functionality
 
   const handleSubmit = async () => {
     const results = calculateResults();
@@ -310,7 +307,7 @@ function App() {
   };
 
   const renderResults = () => {
-    const { totals, percentages } = calculateResults();
+    const { percentages } = calculateResults();
     const sortedTraits = Object.entries(percentages).sort(([,a], [,b]) => b - a);
     
     const traitNames = {
@@ -401,14 +398,14 @@ function App() {
               onClick={() => window.open('https://gumroad.com/l/your-product-standard', '_blank')}
               className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold py-4 px-6 rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Get Complete Analysis (15-20 pages) - $27
+              Get Complete Analysis (15-20 pages) - $19.90
             </button>
             
             <button 
               onClick={() => window.open('https://gumroad.com/l/your-product-premium', '_blank')}
               className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-4 px-6 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Get Premium Analysis (25-30 pages + Bonuses) - $47
+              Get Premium Analysis (25-30 pages + Bonuses) - $29.90
             </button>
           </div>
         </div>
