@@ -366,8 +366,7 @@ function App() {
         </div>
 
         <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-xl p-6">
-          <h4 className="font-bold text-yellow-900 mb-2 text-lg">🎁 This is Your FREE Sample Report</h4>
-          <h4 className="font-bold text-yellow-900 mb-2 text-lg">Your complete detailed report will be sent to <strong>{formData.email}</strong></h4>
+          <h4 className="font-bold text-yellow-900 mb-2 text-lg">🎁 Your detailed FREE report will be sent to <strong>{formData.email}</strong></h4>
           <p className="text-yellow-800 mb-3">
             You've unlocked your basic character blueprint! Want to discover:
           </p>
