@@ -141,44 +141,46 @@ function App() {
 
   // Function removed - not currently used but kept for future functionality
 
-  const handleSubmit = async () => {
-    const results = calculateResults();
-    
-    const payload = {
-      name: formData.name,
-      email: formData.email,
-      age: formData.age,
-      occupation: formData.occupation,
-      scores: results.totals,
-      percentages: results.percentages
-    };
-    
-    try {
-      // IMPORTANTE: Substitua a URL abaixo pela URL do seu Google Apps Script
-      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwrBAFXjXDeG30ZpBhnmve03HG_N0e2LChiuiD7B__KXLSvIBy_VhTIJTTB9MVc3jrr/exec';
-      
-      if (GOOGLE_SCRIPT_URL === 'COLE_SUA_URL_AQUI') {
-        console.log('Dados que seriam enviados:', payload);
-        alert('⚠️ Configure a URL do Google Sheets primeiro!\n\nPor enquanto, os dados foram exibidos no console (pressione F12)');
-        return;
-      }
-      
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload)
-      });
-      
-      alert('✅ Assessment submitted successfully!\n\nCheck your email for your free character blueprint report.');
-      
-    } catch (error) {
-      console.error('Error:', error);
-      alert('❌ There was an error submitting your assessment. Please try again.');
-    }
+ const handleSubmit = async () => {
+  const results = calculateResults();
+  
+  const payload = {
+    name: formData.name,
+    email: formData.email,
+    age: formData.age,
+    occupation: formData.occupation,
+    scores: results.totals,
+    percentages: results.percentages
   };
+  
+  // SUBSTITUA ESTA URL PELA SUA URL DO GOOGLE APPS SCRIPT
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/SUA_URL_AQUI/exec';
+  
+  // Log para debug
+  console.log('Enviando dados:', payload);
+  console.log('URL:', GOOGLE_SCRIPT_URL);
+  
+  try {
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload)
+    });
+    
+    console.log('Resposta:', response);
+    
+    // Com mode: 'no-cors', não podemos ler a resposta
+    // Então assumimos que funcionou se não deu erro
+    alert('✅ Assessment submitted successfully!\n\nCheck your email for your free character blueprint report.');
+    
+  } catch (error) {
+    console.error('Erro completo:', error);
+    alert('❌ There was an error submitting your assessment.\n\nError: ' + error.message + '\n\nPlease try again.');
+  }
+};
 
   const renderPersonalInfo = () => (
     <div className="space-y-6">
