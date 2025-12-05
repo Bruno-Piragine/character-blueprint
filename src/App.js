@@ -155,9 +155,9 @@ function App() {
     
     try {
       // IMPORTANTE: Substitua a URL abaixo pela URL do seu Google Apps Script
-      const GOOGLE_SCRIPT_URL = 'COLE_SUA_URL_AQUI';
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwrBAFXjXDeG30ZpBhnmve03HG_N0e2LChiuiD7B__KXLSvIBy_VhTIJTTB9MVc3jrr/exec';
       
-      if (GOOGLE_SCRIPT_URL === 'COLE_SUA_URL_AQUI') {
+      if (GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwrBAFXjXDeG30ZpBhnmve03HG_N0e2LChiuiD7B__KXLSvIBy_VhTIJTTB9MVc3jrr/exec') {
         console.log('Dados que seriam enviados:', payload);
         alert('⚠️ Configure a URL do Google Sheets primeiro!\n\nPor enquanto, os dados foram exibidos no console (pressione F12)');
         return;
