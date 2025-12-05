@@ -395,7 +395,7 @@ function App() {
           
           <div className="space-y-3">
             <button 
-              onClick={() => window.open('https://humantraitlab.gumroad.com/l/characterblueprint-standart', '_blank')}
+              onClick={() => window.open('https://humantraitlab.gumroad.com/l/characterblueprint-standard', '_blank')}
               className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold py-4 px-6 rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Get Complete Analysis (15-20 pages) - $27.00
