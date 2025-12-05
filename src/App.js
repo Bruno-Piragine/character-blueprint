@@ -154,7 +154,7 @@ function App() {
   };
   
   // SUBSTITUA ESTA URL PELA SUA URL DO GOOGLE APPS SCRIPT
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/SUA_URL_AQUI/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwrBAFXjXDeG30ZpBhnmve03HG_N0e2LChiuiD7B__KXLSvIBy_VhTIJTTB9MVc3jrr/exec';
   
   // Log para debug
   console.log('Enviando dados:', payload);
