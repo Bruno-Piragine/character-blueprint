@@ -333,7 +333,7 @@ function App() {
         <div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Your Character Blueprint</h2>
           <p className="text-gray-600 mb-6">
-            Here's a preview of your character structure analysis. Your complete detailed report will be sent to <strong>{formData.email}</strong>
+            Here's a preview of your character structure analysis. 
           </p>
         </div>
 
@@ -367,6 +367,7 @@ function App() {
 
         <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-xl p-6">
           <h4 className="font-bold text-yellow-900 mb-2 text-lg">🎁 This is Your FREE Sample Report</h4>
+          <h4 className="font-bold text-yellow-900 mb-2 text-lg">Your complete detailed report will be sent to <strong>{formData.email}</strong></h4>
           <p className="text-yellow-800 mb-3">
             You've unlocked your basic character blueprint! Want to discover:
           </p>
@@ -395,17 +396,17 @@ function App() {
           
           <div className="space-y-3">
             <button 
-              onClick={() => window.open('https://gumroad.com/l/your-product-standard', '_blank')}
+              onClick={() => window.open('https://humantraitlab.gumroad.com/l/characterblueprint-premium', '_blank')}
               className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold py-4 px-6 rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Get Complete Analysis (15-20 pages) - $19.90
+              Get Complete Analysis (15-20 pages) - $27.00
             </button>
             
             <button 
-              onClick={() => window.open('https://gumroad.com/l/your-product-premium', '_blank')}
+              onClick={() => window.open('https://humantraitlab.gumroad.com/l/characterblueprint-standard', '_blank')}
               className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold py-4 px-6 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Get Premium Analysis (25-30 pages + Bonuses) - $29.90
+              Get Premium Analysis (25-30 pages + Bonuses) - $47.00
             </button>
           </div>
         </div>
